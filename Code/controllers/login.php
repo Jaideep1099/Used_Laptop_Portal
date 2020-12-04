@@ -15,9 +15,11 @@ if(isset($_POST['uname'])) {
     }
     else{
 
+        $hashed_pwd = hash("sha256",$_POST['pwd']);
+
         $conn = connect_database();
         $qry = "SELECT EMAIL FROM LOGIN WHERE 
-            EMAIL='{$_POST['uname']}' AND PWD='{$_POST['pwd']}';";
+            EMAIL='{$_POST['uname']}' AND PWD='{$hashed_pwd}';";
 
         $res = mysqli_query($conn, $qry);
 
@@ -38,7 +40,7 @@ if(isset($_POST['uname'])) {
 
             mysqli_close($conn);
 
-            header("Location: /Code/home");
+            header("Location: /home");
         }
         else {
             $err_msg = "Invalid Login!";

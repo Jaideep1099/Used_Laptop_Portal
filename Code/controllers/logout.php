@@ -14,6 +14,6 @@ session_unset();
 
 session_destroy();
 
-header("Location: /Code/login");
+header("Location: /login");
 
 ?>

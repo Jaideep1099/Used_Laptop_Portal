@@ -6,7 +6,7 @@ require_once "validation.php";
 session_start();
 
 if(!loggedin_check($_SESSION)) {
-    header("Location: /Code/login");
+    header("Location: /login");
 }
 else{
 
@@ -28,7 +28,7 @@ else{
 
         mysqli_close($conn);
     }
-    header("Location: /Code/selleritem/{$it_id}");
+    header("Location: /selleritem/{$it_id}");
 }
 
 ?>

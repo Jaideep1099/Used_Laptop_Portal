@@ -3,48 +3,48 @@
 $img_dir = "images/uploads/";
 
 $Routes = [
-    'Code' => 'controllers/home.php',
-    'Code/index' => 'controllers/home.php',
-    'Code/index.php' => 'controllers/home.php',
-    'Code/home' => 'controllers/home.php',
-    'Code/login' => 'controllers/login.php',
-    'Code/signup' => 'controllers/signup.php',
-    'Code/about' => 'controllers/about.php',
-    'Code/logout' => 'controllers/logout.php',
-    'Code/seller' => 'controllers/seller.php',
-    'Code/product' => 'controllers/product.php',
-    'Code/delete' => 'controllers/delete.php',
-    'Code/profile' => 'controllers/profile.php',
-    'Code/purchase' => 'controllers/purchase.php',
-    'Code/selleritem' => 'controllers/selleritem.php',
-    'Code/addans' => 'controllers/addans.php'
+    '' => 'controllers/home.php',
+    'index' => 'controllers/home.php',
+    'index.php' => 'controllers/home.php',
+    'home' => 'controllers/home.php',
+    'login' => 'controllers/login.php',
+    'signup' => 'controllers/signup.php',
+    'about' => 'controllers/about.php',
+    'logout' => 'controllers/logout.php',
+    'seller' => 'controllers/seller.php',
+    'product' => 'controllers/product.php',
+    'delete' => 'controllers/delete.php',
+    'profile' => 'controllers/profile.php',
+    'purchase' => 'controllers/purchase.php',
+    'selleritem' => 'controllers/selleritem.php',
+    'addans' => 'controllers/addans.php'
 ];
 
 
 $uri = trim($_SERVER["REQUEST_URI"],'/');
 
-if(strstr($uri,"Code/product")){
-    $data = ltrim($uri,"Code/product/");
+if(strstr($uri,"product")){
+    $data = ltrim($uri,"product/");
     $uri = rtrim($uri,"/".$data);
 }
 
-if(strstr($uri,"Code/delete")){
-    $dltid = ltrim($uri,"Code/delete/");
+if(strstr($uri,"delete")){
+    $dltid = ltrim($uri,"delete/");
     $uri = rtrim($uri,"/".$dltid);
 }
 
-if(strstr($uri,"Code/purchase")){
-    $pur_id = ltrim($uri,"Code/purchase/");
+if(strstr($uri,"purchase")){
+    $pur_id = ltrim($uri,"purchase/");
     $uri = rtrim($uri,"/".$pur_id);
 }
 
-if(strstr($uri,"Code/selleritem")){
-    $it_id = ltrim($uri,"Code/selleritem/");
+if(strstr($uri,"selleritem")){
+    $it_id = ltrim($uri,"selleritem/");
     $uri = rtrim($uri,"/".$it_id);
 }
 
-if(strstr($uri,"Code/addans")){
-    $q_id = ltrim($uri,"Code/addans/");
+if(strstr($uri,"addans")){
+    $q_id = ltrim($uri,"addans/");
     $uri = rtrim($uri,"/".$q_id);
 }
 

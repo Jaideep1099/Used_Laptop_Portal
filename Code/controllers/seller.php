@@ -8,7 +8,7 @@ session_start();
 $add_err="";
 
 if(!loggedin_check($_SESSION)) {
-    header("Location: /Code/login");
+    header("Location: /login");
 }
 else{
 

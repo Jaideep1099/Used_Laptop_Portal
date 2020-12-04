@@ -8,7 +8,7 @@ session_start();
 $updt_err="";
 
 if(!loggedin_check($_SESSION)) {
-    header("Location: /Code/login");
+    header("Location: /login");
 }
 else{
 
@@ -34,7 +34,9 @@ else{
             }
             else{
                 
-                $qry = "UPDATE LOGIN SET PWD='{$_POST['pwd']}' 
+                $hashed_pwd = hash("sha256",$_POST['pwd']);
+
+                $qry = "UPDATE LOGIN SET PWD='{$hashed_pwd}' 
                     WHERE EMAIL = '{$_SESSION['uname']}';";
                 
                 $res = mysqli_query($conn, $qry);

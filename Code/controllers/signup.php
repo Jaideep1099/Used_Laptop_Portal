@@ -47,16 +47,19 @@ if(isset($_POST['nm']))
             die("Data insertion failed : ".mysqli_error($conn));
         }
 
+        $hashed_pwd = hash("sha256",$_POST['pwd']);
+
+
         $qry = "INSERT INTO LOGIN VALUES (
             '{$_POST['uname']}',
-            '{$_POST['pwd']}');";
+            '{$hashed_pwd}');";
 
         if(!mysqli_query($conn,$qry)){
             mysqli_close($conn);
             die("Data insertion failed : ".mysqli_error($conn));
         }
         
-        header("Location: /Code/login");
+        header("Location: /login");
     }
 }
 else 
