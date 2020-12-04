@@ -1,0 +1,57 @@
+body.white{
+    background-color: white;
+}
+
+#loginblock {
+    background-color: lightblue;
+    padding: 10px 10px 30px 10px;
+    width: 350px;
+    min-width: max-content;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+}
+
+table {
+    margin: auto;
+}
+
+#loginblock h2 {
+    color: rgb(30, 71, 117);
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+}
+
+.bluebutton {
+    padding: 6px;
+    background-color: rgb(23, 23, 116);
+    color: white;
+    margin: auto;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+label {
+    font-size: 12px;
+    padding: 2px;
+}
+
+td {
+    padding: 3px;
+    text-align: left;
+}
+
+.centered{
+    padding: 5px;
+    text-align: center;
+}
+
+input {
+    padding: 5px;
+    margin: auto;
+}
